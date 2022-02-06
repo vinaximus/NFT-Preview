@@ -27,17 +27,32 @@ body {
     width: 100%;
     height: 335px;
     margin-bottom: 15px;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.eq-card-imgarea::after {
+    content: url(./images/icon-view.svg);
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    background-color: hsl(178, 100%, 50%, 0.5);
+    opacity: 0;
+    transition: opacity 0.2s linear;
+}
+
+.eq-card-imgarea:hover::after {
+    opacity: 1;
 }
 
 .eq-card-image {
     width: 100%;
-    border-radius: 5px;
     margin-bottom: 15px;
 }
 
-.eq-card-image:hover {
-    opacity: 50%;
-}
 .eq-card-txtarea {
     height: 120px;
 }
